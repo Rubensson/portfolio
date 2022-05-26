@@ -32,7 +32,9 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 section {
   width: 100%;
   height: auto;
@@ -77,7 +79,7 @@ header {
   height: 100vh;
   /*   background-color: var(--gray_light);
  */
-  background-image: url(/imagenes/notebook.jpg);
+  background-image: url(imagenes/notebook.jpg);
   background-size: auto;
   background-size: cover;
   background-position: center top;
@@ -86,6 +88,7 @@ header {
 
 .nav-bar {
   background-color: var(--blue);
+  width: 100%;
 }
 .nav-container {
   width: 80%;
@@ -130,6 +133,9 @@ header {
   text-decoration: none;
   margin: 0 15px;
   letter-spacing: 1px;
+}
+.link:hover {
+  color: var(--yellow);
 }
 
 /* =============== About me ============== */
@@ -233,7 +239,7 @@ header {
 }
 
 .skill-resume-container {
-  background-image: url(/imagenes/notebook2.jpg);
+  background-image: url(imagenes/notebook2.jpg);
   background-size: cover;
   box-shadow: var(--box-shadow);
   border-radius: var(--border-radius);
@@ -294,10 +300,13 @@ header {
   justify-content: space-around;
 }
 .projects-card {
+  text-align: center;
   width: 30%;
   margin: 10px;
   box-shadow: var(--box-shadow);
   border-radius: var(--border-radius);
+  padding-bottom: 10px;
+  margin-bottom: 20px;
 }
 .subtitle-project {
   font-family: var(--h3-font);
@@ -305,17 +314,10 @@ header {
   font-size: var(--h3-font-zise);
   text-align: left;
   padding: 10px;
-}
-
-.image-card {
-  position: relative;
+  color: var(--blue);
 }
 
 .projects-card .btn {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   background: none;
   border: 1px solid var(--yellow);
   color: var(--yellow);
@@ -448,6 +450,9 @@ footer {
   .btn {
     padding: 0 20px;
   }
+  .projects-card {
+    width: 45%;
+  }
 }
 
 @media screen and (max-width: 800px) {
@@ -466,5 +471,8 @@ footer {
   }
   .navigation {
     margin-top: 20px;
+  }
+  .projects-card {
+    width: 90%;
   }
 }
