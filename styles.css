@@ -32,21 +32,22 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 html {
   scroll-behavior: smooth;
 }
 section {
   width: 100%;
   height: auto;
-  padding: 50px 0;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .container {
-  width: 80%;
   height: auto;
   margin: auto;
-  margin-top: 50px;
   border-radius: var(--border-radius);
+  padding: 10px;
 }
 
 .subtitle {
@@ -55,6 +56,13 @@ section {
   font-weight: var(--h2-font-weight);
   font-size: var(--h2-font-zise);
   text-align: center;
+}
+
+.title-underline {
+  width: 200px;
+  margin: 5px auto;
+  border: 1px solid var(--yellow);
+  margin-bottom: 50px;
 }
 
 .btn {
@@ -70,33 +78,19 @@ section {
   border-radius: var(--border-radius);
   padding: 0 30px;
   letter-spacing: var(--letter-spacing);
+  cursor: pointer;
 }
 
 /* =============== Header ============== */
 
 header {
-  width: 100%;
-  height: 100vh;
-  /*   background-color: var(--gray_light);
- */
-  background-image: url(imagenes/notebook.jpg);
-  background-size: auto;
-  background-size: cover;
-  background-position: center top;
-}
-/* =============== Nav ============== */
-
-.nav-bar {
   background-color: var(--blue);
   width: 100%;
-}
-.nav-container {
-  width: 80%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 20px;
-  margin-top: 0;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 10px;
 }
 .subtitle-logo {
   color: var(--gray_dark);
@@ -138,6 +132,19 @@ header {
   color: var(--yellow);
 }
 
+/* =============== Hero ============== */
+
+.section-hero {
+  width: 100%;
+  height: 90vh;
+  /*   background-color: var(--gray_light);
+ */
+  background-image: url(imagenes/notebook.jpg);
+  background-size: auto;
+  background-size: cover;
+  background-position: center top;
+}
+
 /* =============== About me ============== */
 
 .about_me {
@@ -145,28 +152,30 @@ header {
 }
 
 .about_me-container {
-  width: 70%;
-  height: 80vh;
+  width: 1020px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   box-shadow: 0 2px 3px 0 #f0f0f0;
-  border: 1px px solid #f0f0f0;
-  background: var(--blue);
-  padding: 10px;
+  background: #fff;
+  border: 1px solid #f8f8f8;
 }
 
 .foto {
-  width: 50%;
+  width: 500px;
   background-color: #ffb400;
   border-radius: var(--border-radius);
 }
-
+.foto img {
+  width: 100%;
+  height: 100%;
+  border-radius: var(--border-radius);
+}
 .texto-perfil {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   padding: 10px;
-  width: 50%;
+  width: 500px;
   text-align: center;
 }
 
@@ -174,12 +183,14 @@ header {
   font-family: var(--h3-font);
   font-size: var(--h3-font-zise);
   font-weight: var(--h3-font-weight);
-  color: var(--yellow);
+  color: var(--blue);
+  font-weight: 700;
 }
 
 .texto-perfil p {
   font-family: var(--text-font);
-  color: var(--gray_light);
+  color: var(--blue);
+  margin-bottom: 20px;
 }
 
 .btn-perfil {
@@ -188,20 +199,22 @@ header {
 
 /* =============== Skills ============== */
 
+.section-skills {
+  background-color: var(--blue);
+}
 .skills-container {
-  height: 80vh;
+  width: 1100px;
+  height: auto;
   display: flex;
   justify-content: space-between;
-  padding: 10px;
-  /*   background-color: var(--gray_dark);
- */
+  gap: 10px;
 }
+
 .skills-items {
-  width: 50%;
+  width: 550px;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  padding: 10px;
+  justify-content: space-between;
 }
 
 .skill-item {
@@ -210,9 +223,10 @@ header {
   justify-content: space-between;
   background-color: var(--gray_light);
   border-radius: var(--border-radius);
-  margin-right: 100px;
   padding: 20px;
   box-shadow: var(--box-shadow);
+  cursor: pointer;
+  color: var(--blue);
 }
 .skill-item h3 {
   font-family: var(--h3-font);
@@ -221,13 +235,7 @@ header {
 }
 
 .skill-item:hover {
-  animation: extend-box 0.2s ease-out forwards;
-}
-@keyframes extend-box {
-  100% {
-    background-color: #ffbf2b;
-    margin-right: 70px;
-  }
+  background-color: var(--yellow);
 }
 
 .skill-icon {
@@ -243,14 +251,14 @@ header {
   background-size: cover;
   box-shadow: var(--box-shadow);
   border-radius: var(--border-radius);
-  width: 50%;
+  width: 550px;
 }
 .skills-resume-content {
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  width: 100%;
+  width: 550px;
   height: 100%;
   background-color: rgba(249, 249, 249, 0.7);
   border-radius: var(--border-radius);
@@ -295,9 +303,10 @@ header {
   background-color: var(--gray_dark);
 }
 .projects-container {
+  width: 1200px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 .projects-card {
   text-align: center;
@@ -340,19 +349,19 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  padding-top: 50px;
+
   color: var(--gray_light);
   background-color: var(--blue);
 }
 
 .subscribe-container {
-  padding: 20px;
+  padding: 50px;
 }
 .subscribe-container .subtitle {
   color: var(--gray_light);
 }
 .contact-me {
-  width: 30%;
+  width: 500px;
   display: flex;
   flex-direction: column;
   margin: auto;
@@ -384,27 +393,31 @@ footer {
 .contact {
   background-color: #000;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
-  padding: 50px;
 }
 .contact-item {
+  width: 220px;
   text-align: center;
+  margin: 20px;
 }
 .logo-contact {
   font-size: 32px;
-  background-color: var(--red);
   padding: 5px;
   border-radius: 50%;
   margin-bottom: 10px;
 }
 
 .social-copy {
+  background-color: #000;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
+  padding: 20px 0;
 }
 .socialmedia {
   text-align: center;
+  margin: 20px auto;
 }
 .socialmedia a {
   color: var(--gray_light);
@@ -426,13 +439,6 @@ footer {
   font-weight: var(--text-font-weight);
 }
 
-.title-underline {
-  width: 200px;
-  margin: 5px auto;
-  border: 1px solid var(--yellow);
-  margin-bottom: 20px;
-}
-
 /* =============== Resposive ============== */
 
 @media screen and (max-width: 1024px) {
@@ -450,6 +456,22 @@ footer {
   .btn {
     padding: 0 20px;
   }
+
+  /* About me */
+  .about_me-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  /* Skills */
+
+  .skills-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .skills-items {
+    gap: 20px;
+  }
+  /* Projects */
   .projects-card {
     width: 45%;
   }
@@ -466,7 +488,7 @@ footer {
     flex-direction: column;
   }
 
-  .nav-bar .btn {
+  header .btn {
     display: none !important;
   }
   .navigation {
@@ -475,4 +497,46 @@ footer {
   .projects-card {
     width: 90%;
   }
+
+  /* About me */
+  .about_me-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .foto {
+    width: 100%;
+  }
+  .texto-perfil {
+    width: 100%;
+  }
+  /* Skills */
+
+  .skills-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .skills-items {
+    width: 100%;
+    gap: 20px;
+  }
+  .skill-resume-container {
+    width: 100%;
+  }
+  .skills-resume-content {
+    width: 100%;
+  }
+
+  /* Projects */
+  .projects-card {
+    width: 100%;
+  }
+
+  /* Footer */
+  .contact-me {
+    width: 100%;
+  }
+  /* .contact {
+    flex-wrap: wrap;
+  } */
 }
